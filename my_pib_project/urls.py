@@ -19,4 +19,12 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    #? 'path' function is used to define URL patterns and map them to specific view functions
+    #? 'include' function is used to include other URL patterns from different DJango apps into your project's URL configuration
+    path('data_harvesters/', include('data_harvesters.urls')),
+    path('data_alchemists/', include('data_alchemists.urls')),
+    path('alert_dispatchers/', include('alert_dispatchers.urls')),
+    #! Yet to give definations
+    path('', include('frontend.urls'))
 ]

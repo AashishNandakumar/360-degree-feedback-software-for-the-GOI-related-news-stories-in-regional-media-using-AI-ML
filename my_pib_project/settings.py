@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #? The applications which we use within our project 
+    'data_harvesters',
+    'data_alchemists',
+    'alert_dispatchers',
+    'frontend'
 ]
 
 MIDDLEWARE = [
@@ -54,6 +60,7 @@ ROOT_URLCONF = 'my_pib_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        #? Add static templates (HTML, CSS, JS files) here
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {

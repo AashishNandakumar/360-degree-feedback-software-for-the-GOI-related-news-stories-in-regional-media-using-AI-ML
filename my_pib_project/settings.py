@@ -84,11 +84,16 @@ WSGI_APPLICATION = 'my_pib_project.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
     
+    #? Our custom DB connection
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DATABASE'),
+        'USER': os.getenv('USERNAME1'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'HOST': os.getenv('HOSTNAME1'),
+        'PORT': os.getenv('PORT', '5432'),
+    }
     
 }
 

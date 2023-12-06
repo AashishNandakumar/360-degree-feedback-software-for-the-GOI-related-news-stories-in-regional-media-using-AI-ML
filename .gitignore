@@ -1,1 +1,5 @@
 .env
+data_harvesters/
+data_alchemists/
+alert_dispatchers/
+db.sqlite3
